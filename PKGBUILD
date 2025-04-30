@@ -6,7 +6,7 @@ pkgdesc="Dependency installation for Turkish smartcard providers (etugra, tubita
 arch=('x86_64')
 url="https://github.com/Turab/eimza"
 license=('custom')
-depends=('akia' 'java-runtime' 'acsccid' 'ccid' 'pcsc-tools' 'opensc' 'sac-core' 'pkcs11-helper' 'safesign-lib')
+depends=('akia' 'java-runtime' 'acsccid' 'ccid' 'pcsc-tools' 'opensc' 'sac-core' 'pkcs11-helper' 'safesignidentityclient')
 
 package() {
     install -d "${pkgdir}/usr/lib"
