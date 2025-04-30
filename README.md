@@ -10,12 +10,22 @@ Paketi `yay` veya `paru` vb. bir AUR yardımcısı ile kurabilirsiniz. (Örneği
 > [!IMPORTANT]
 > E-imzanızın daha önceden etkinleştirilmiş ve kullanıma açılmış olması gerekiyor. E-imza firmaları Linux desteği vermediğinden dolayı etkinleştirme programları sadece Windows'ta çalışıyor. Bu nedenle Linux'ta kullanmaya başlamadan önce etkinleştirme/kullanıma açma işlemini bir defaya mahsus Windows'ta yapmanız gerekecektir.
 
+> [!IMPORTANT]
+> Kurulum tamamlandıktan sonra `pcscd` servisini çalıştırmanız gerekir:
+> ```bash
+> systemctl start pcscd
+> ```
+> Eğer sık sık kullanırsanız servisi etkinleştirmeyi düşünün:
+> ```bash
+> systemctl enable pcscd
+> ```
+
 > [!TIP]
 > Linux üzerinde Java Web Start (`javaws`) (Yani .jnlp dosyası çalıştırma) desteği biraz problemli. Bu yüzden JNLP dosyası ile çalışması gereken e-imza uygulamalarını (örneğin turkiye.gov.tr 'deki E-Devlet uygulaması) önce bilgisayarınıza indirin. Ardından bir metin düzenleyici ile açarak .jar dosyasının konumunu kopyalayın ve o dosyayı bilgisayarınıza indirerek direkt çalıştırın. Dileyenler JNLP desteği için `icedtea-web` kullanabilir ancak paket artık güncellenmiyor, son sürümü 2021 yılında yayınlanmış ve yeni Java ortamları ile uyumsuzluk problemleri çıkarabiliyor.
 
 > [!NOTE]
 > PTT Kep (ve bazı benzeri uygulamalar) ek paket tanımlarına ihtiyaç duyabilir. Örnek olarak PTT KEP e-imza uygulamasının JAR dosyasını indirdikten sonra şu komutla çalıştırabilirsiniz:
-> ```
+> ```bash
 > java --add-exports jdk.crypto.cryptoki/sun.security.pkcs11=ALL-UNNAMED --add-exports jdk.crypto.cryptoki/sun.security.pkcs11.wrapper=ALL-UNNAMED --add-opens java.base/java.security=ALL-UNNAMED --add-exports java.base/sun.security.action=ALL-UNNAMED --add-exports java.base/sun.security.rsa=ALL-UNNAMED --add-opens java.base/sun.security.util=ALL-UNNAMED -jar /dosya/konumu/PTT.jar
 > ```
 > Bu komutu bir `sh` dosyasına kaydedip çalıştırılabilir yapıp PTT e-imza uygulamasını onunla da başlatabilirsiniz veya örneğin masaüstü ortamında (örneğin KDE) bir menü oluşturup program olarak `java` ve parametre olarak da yukarıdaki komutun kalan kısımlarını girerbilirsiniz. Böylece o menüye tıkladığınızda PTT e-imza uygulaması otomatik açılır.
