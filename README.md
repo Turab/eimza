@@ -15,7 +15,7 @@ Paketi `yay` veya `paru` vb. bir AUR yardımcısı ile kurabilirsiniz. (Örneği
 > ```bash
 > systemctl start pcscd
 > ```
-> Eğer sık sık kullanırsanız servisi etkinleştirmeyi düşünün:
+> Eğer sık sık e-miza kullanıyorsanız servisi etkinleştirmeyi düşünün:
 > ```bash
 > systemctl enable pcscd
 > ```
@@ -28,7 +28,7 @@ Paketi `yay` veya `paru` vb. bir AUR yardımcısı ile kurabilirsiniz. (Örneği
 > ```bash
 > java --add-exports jdk.crypto.cryptoki/sun.security.pkcs11=ALL-UNNAMED --add-exports jdk.crypto.cryptoki/sun.security.pkcs11.wrapper=ALL-UNNAMED --add-opens java.base/java.security=ALL-UNNAMED --add-exports java.base/sun.security.action=ALL-UNNAMED --add-exports java.base/sun.security.rsa=ALL-UNNAMED --add-opens java.base/sun.security.util=ALL-UNNAMED -jar /dosya/konumu/PTT.jar
 > ```
-> Bu komutu bir `sh` dosyasına kaydedip çalıştırılabilir yapıp PTT e-imza uygulamasını onunla da başlatabilirsiniz veya örneğin masaüstü ortamında (örneğin KDE) bir menü oluşturup program olarak `java` ve parametre olarak da yukarıdaki komutun kalan kısımlarını girerbilirsiniz. Böylece o menüye tıkladığınızda PTT e-imza uygulaması otomatik açılır.
+> Bu komutu bir `sh` dosyasına kaydedip çalıştırılabilir yapıp PTT e-imza uygulamasını onunla da başlatabilirsiniz veya örneğin masaüstü ortamında (örneğin KDE) bir menü oluşturup program olarak `java` ve parametre olarak da yukarıdaki komutun kalan kısımlarını girebilirsiniz. Böylece o menüye tıkladığınızda PTT e-imza uygulaması otomatik açılır.
 
 > [!NOTE]
 > PDF imzalamak için `jsignpdf` kullanabilirsiniz. Ayrıca LibreOffice de tüm doküman imzalamalarını destekliyor. Okular'da da e-imza desteği var ancak bunun için e-imzanızı sertifika deposuna yüklemeniz gerekiyor.
